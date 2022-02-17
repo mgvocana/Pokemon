@@ -4,17 +4,20 @@ import java.util.ArrayList;
 
 import poke.model.monsters.*;
 import poke.model.monsters.Pokemon;
+import poke.view.PokeFrame;
 
 public class Controller
 {
 	ArrayList <Pokemon> pokedex;
 	String dataFile;
+	PokeFrame frame;
 	
 	public Controller()
 	{
 		pokedex = new ArrayList <Pokemon> ();
 		dataFile = "";
 		createPokedex();
+		frame = new PokeFrame(this);
 	}
 	
 	public void start()
