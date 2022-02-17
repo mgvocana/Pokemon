@@ -6,8 +6,8 @@
     <coordinates>
       <x>400</x>
       <y>80</y>
-      <w>190</w>
-      <h>200</h>
+      <w>260</w>
+      <h>170</h>
     </coordinates>
     <panel_attributes>/Pokemon/
 --
@@ -16,8 +16,10 @@
 - pokedexNumber : int
 - canEvolve: boolean
 --
-
-
++ get()/set(...)
++ Pokemon(int, String) : constructor
++ toString() : String
++ getTypes() : String []
 
 
 </panel_attributes>
