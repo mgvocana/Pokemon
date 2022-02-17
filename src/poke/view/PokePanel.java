@@ -9,7 +9,35 @@ import javax.swing.JScrollPane;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 
-public class PokePanel
-{
+import poke.controller.Controller;
 
+public class PokePanel extends JPanel
+{
+	private Controller controller;
+	
+	public PokePanel(Controller app)
+	{
+		super();
+		
+		this.controller = app;
+		
+		setupPanel();
+		setupListeners();
+		setupLayout();
+	}
+	
+	private void setupPanel()
+	{
+		
+	}
+	
+	private void setupListeners()
+	{
+		
+	}
+	
+	private void setupLayout()
+	{
+		
+	}
 }
