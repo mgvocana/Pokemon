@@ -1,6 +1,8 @@
 package poke.model.monsters;
 
-public class Leafeon extends Eevee
+import poke.model.types.Grass;
+
+public class Leafeon extends Eevee implements Grass
 {
 	public Leafeon()
 	{
@@ -16,4 +18,18 @@ public class Leafeon extends Eevee
 	{
 		super(number, name);
 	}
+
+	@Override
+	public void deadlyVines()
+	{
+		
+	}
+
+	@Override
+	public void venusFlyTrap()
+	{
+		
+	}
+	
+	
 }

@@ -1,6 +1,8 @@
 package poke.model.monsters;
 
-public class Shaymin extends Pokemon
+import poke.model.types.Grass;
+
+public class Shaymin extends Pokemon implements Grass
 {
 	public Shaymin ()
 	{
@@ -15,5 +17,17 @@ public class Shaymin extends Pokemon
 	public Shaymin(int number, String name)
 	{
 		super(number, name);
+	}
+
+	@Override
+	public void deadlyVines()
+	{
+		
+	}
+
+	@Override
+	public void venusFlyTrap()
+	{
+		
 	}
 }

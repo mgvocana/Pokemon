@@ -1,6 +1,8 @@
 package poke.model.monsters;
 
-public class Flareon extends Eevee
+import poke.model.types.Fire;
+
+public class Flareon extends Eevee implements Fire
 {
 	public Flareon()
 	{
@@ -15,5 +17,17 @@ public class Flareon extends Eevee
 	public Flareon (int number, String name)
 	{
 		super(number, name);
+	}
+
+	@Override
+	public void flamethrower()
+	{
+		
+	}
+
+	@Override
+	public int fireBall()
+	{
+		return 0;
 	}
 }

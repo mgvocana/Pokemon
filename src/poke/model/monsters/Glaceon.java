@@ -1,6 +1,8 @@
 package poke.model.monsters;
 
-public class Glaceon extends Eevee
+import poke.model.types.Ice;
+
+public class Glaceon extends Eevee implements Ice
 {
 	public Glaceon()
 	{
@@ -15,5 +17,17 @@ public class Glaceon extends Eevee
 	public Glaceon (int number, String name)
 	{
 		super(number, name);
+	}
+
+	@Override
+	public void frostbite()
+	{		
+		
+	}
+
+	@Override
+	public void permafrost()
+	{
+		
 	}
 }

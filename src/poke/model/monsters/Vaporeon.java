@@ -1,6 +1,8 @@
 package poke.model.monsters;
 
-public class Vaporeon extends Eevee
+import poke.model.types.Water;
+
+public class Vaporeon extends Eevee implements Water
 {
 	public Vaporeon()
 	{
@@ -15,5 +17,17 @@ public class Vaporeon extends Eevee
 	public Vaporeon (int number, String name)
 	{
 		super(number, name);
+	}
+
+	@Override
+	public void splash()
+	{
+		
+	}
+
+	@Override
+	public int bubbles()
+	{
+		return 0;
 	}
 }

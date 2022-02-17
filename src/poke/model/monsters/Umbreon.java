@@ -1,6 +1,8 @@
 package poke.model.monsters;
 
-public class Umbreon extends Eevee
+import poke.model.types.Dark;
+
+public class Umbreon extends Eevee implements Dark
 {
 	public Umbreon()
 	{
@@ -15,5 +17,17 @@ public class Umbreon extends Eevee
 	public Umbreon (int number, String name)
 	{
 		super(number, name);
+	}
+
+	@Override
+	public void shadowScreen()
+	{
+		
+	}
+
+	@Override
+	public void penumbra()
+	{
+		
 	}
 }

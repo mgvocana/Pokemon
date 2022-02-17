@@ -1,6 +1,8 @@
 package poke.model.monsters;
 
-public class Delcatty extends Pokemon
+import poke.model.types.Normal;
+
+public class Delcatty extends Pokemon implements Normal
 {
 	public Delcatty()
 	{
@@ -15,5 +17,17 @@ public class Delcatty extends Pokemon
 	public Delcatty(int number, String name)
 	{
 		super(number, name);
+	}
+
+	@Override
+	public void cuddle()
+	{
+		
+	}
+
+	@Override
+	public double scream()
+	{
+		return 0.9;
 	}
 }

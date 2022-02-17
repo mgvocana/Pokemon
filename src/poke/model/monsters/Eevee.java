@@ -1,6 +1,8 @@
 package poke.model.monsters;
 
-public class Eevee extends Pokemon
+import poke.model.types.Normal;
+
+public class Eevee extends Pokemon implements Normal
 {
 	public Eevee()
 	{
@@ -15,5 +17,17 @@ public class Eevee extends Pokemon
 	public Eevee (int number, String name)
 	{
 		super(number, name);
+	}
+
+	@Override
+	public void cuddle()
+	{
+		
+	}
+
+	@Override
+	public double scream()
+	{
+		return 0;
 	}
 }

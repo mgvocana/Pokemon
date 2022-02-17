@@ -1,6 +1,8 @@
 package poke.model.monsters;
 
-public class Jolteon extends Eevee
+import poke.model.types.Electric;
+
+public class Jolteon extends Eevee implements Electric
 {
 	public Jolteon()
 	{
@@ -15,5 +17,17 @@ public class Jolteon extends Eevee
 	public Jolteon (int number, String name)
 	{
 		super(number, name);
+	}
+
+	@Override
+	public void shock()
+	{
+		
+	}
+
+	@Override
+	public void electricute()
+	{
+		
 	}
 }

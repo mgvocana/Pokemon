@@ -1,6 +1,8 @@
 package poke.model.monsters;
 
-public class Espeon extends Eevee
+import poke.model.types.Psychic;
+
+public class Espeon extends Eevee implements Psychic
 {
 	public Espeon()
 	{
@@ -15,5 +17,17 @@ public class Espeon extends Eevee
 	public Espeon (int number, String name)
 	{
 		super(number, name);
+	}
+
+	@Override
+	public void mindRead()
+	{
+		
+	}
+
+	@Override
+	public void mindControl()
+	{
+		
 	}
 }

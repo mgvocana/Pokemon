@@ -1,6 +1,8 @@
 package poke.model.monsters;
 
-public class Sylveon extends Eevee
+import poke.model.types.Fairy;
+
+public class Sylveon extends Eevee implements Fairy
 {
 	public Sylveon()
 	{
@@ -15,5 +17,17 @@ public class Sylveon extends Eevee
 	public Sylveon (int number, String name)
 	{
 		super(number, name);
+	}
+
+	@Override
+	public void glitterbomb()
+	{
+		
+	}
+
+	@Override
+	public void twinkle()
+	{
+		
 	}
 }

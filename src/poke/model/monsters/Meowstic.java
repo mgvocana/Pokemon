@@ -1,6 +1,8 @@
 package poke.model.monsters;
 
-public class Meowstic extends Pokemon
+import poke.model.types.Psychic;
+
+public class Meowstic extends Pokemon implements Psychic
 {
 	public Meowstic()
 	{
@@ -15,5 +17,17 @@ public class Meowstic extends Pokemon
 	public Meowstic(int number, String name)
 	{
 		super(number, name);
+	}
+
+	@Override
+	public void mindRead()
+	{
+		
+	}
+
+	@Override
+	public void mindControl()
+	{
+		
 	}
 }
