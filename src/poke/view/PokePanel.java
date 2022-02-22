@@ -9,6 +9,9 @@ import javax.swing.JScrollPane;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 
+import java.awt.GridLayout;
+import java.awt.Color;
+
 import poke.controller.Controller;
 
 public class PokePanel extends JPanel
