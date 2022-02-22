@@ -84,6 +84,12 @@ public abstract class Pokemon implements Serializable
 		this.name = name;
 	}
 	
+	public void setup(boolean evolve, int health)
+	{
+		this.setCanEvolve(evolve);
+		this.setHealth(health);
+	}
+	
 	@Override
 	public String toString()
 	{
