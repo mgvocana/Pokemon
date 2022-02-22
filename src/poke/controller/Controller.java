@@ -42,5 +42,6 @@ public class Controller
 		pokedex.add(new Umbreon());
 		pokedex.add(new Vaporeon());
 		pokedex.add(new Vulpix());
+		pokedex.add(new Pikachu());
 	}
 }
