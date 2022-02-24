@@ -85,6 +85,8 @@ public class PokePanel extends JPanel
 		typePane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 		typePane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
 		
+		updateDisplay("");
+		
 	}
 	
 	private void setupListeners()
@@ -103,5 +105,22 @@ public class PokePanel extends JPanel
 		layout.putConstraint(SpringLayout.EAST, pokedexSelector, -150, SpringLayout.WEST, fieldPanel);
 		layout.putConstraint(SpringLayout.NORTH, imageLabel, 150, SpringLayout.NORTH, this);
 		layout.putConstraint(SpringLayout.EAST, imageLabel, -100, SpringLayout.WEST, fieldPanel);
+	}
+	
+	private void updateDisplay(String name)
+	{
+		String path = "/poke/view/images/";
+		String defaultName = "Espeon";
+		String extension = ".png";
+		
+		try
+		{
+			pokemonImage = new ImageIcon(getClass().getResource(path + name + extension));
+		}
+		catch (NullPointerException missingFile)
+		{
+			pokemonImage = new ImageIcon(getClass().getResource(path + defaultName + extension));
+		}
+		imageLabel.setIcon(pokemonImage);
 	}
 }
