@@ -110,7 +110,7 @@ public class PokePanel extends JPanel
 	private void updateDisplay(String name)
 	{
 		String path = "/poke/view/images/";
-		String defaultName = "Espeon";
+		String defaultName = "Flareon";
 		String extension = ".png";
 		
 		try
