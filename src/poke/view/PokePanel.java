@@ -45,7 +45,7 @@ public class PokePanel extends JPanel
 		this.health = new JTextField("Health");
 		this.canEvolve = new JCheckBox("Can evolve");
 		this.fieldPanel = new JPanel(new GridLayout());
-		this.pokedexSelector = new JComboBox();
+		this.pokedexSelector = new JComboBox<String>();
 		this.pokemonImage = new ImageIcon();
 		this.imageLabel = new JLabel();
 		
