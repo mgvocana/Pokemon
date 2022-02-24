@@ -34,6 +34,8 @@ public class PokePanel extends JPanel
 	private ImageIcon pokemonImage;
 	private JComboBox<String> pokedexSelector;
 	
+	private JButton saveButton;
+	
 	public PokePanel(Controller app)
 	{
 		super();
@@ -56,6 +58,8 @@ public class PokePanel extends JPanel
 		this.typePane = new JScrollPane();
 		this.typeText = new JTextArea();
 		
+		this.saveButton = new JButton("Gotta catch them all!");
+		
 		setupPanel();
 		setupListeners();
 		setupLayout();
@@ -67,6 +71,7 @@ public class PokePanel extends JPanel
 		this.setPreferredSize(new Dimension(800, 600));
 		this.setBackground(new Color(217, 24, 24));
 		
+		fieldPanel.add(saveButton);
 		fieldPanel.add(name);
 		fieldPanel.add(health);
 		fieldPanel.add(number);
@@ -91,7 +96,7 @@ public class PokePanel extends JPanel
 	
 	private void setupListeners()
 	{
-		
+		saveButton.addActionListener(click -> controller.save());
 	}
 	
 	private void setupLayout()
@@ -110,7 +115,7 @@ public class PokePanel extends JPanel
 	private void updateDisplay(String name)
 	{
 		String path = "/poke/view/images/";
-		String defaultName = "Flareon";
+		String defaultName = "Vulpix";
 		String extension = ".png";
 		
 		try

@@ -15,14 +15,19 @@ public class Controller
 	public Controller()
 	{
 		pokedex = new ArrayList <Pokemon> ();
-		dataFile = "";
+		dataFile = "save.pokemon";
 		createPokedex();
 		frame = new PokeFrame(this);
 	}
 	
 	public void start()
 	{
+		ArrayList<Pokemon> loadList  =IOController.loadData(dataFile, frame);
 		
+		if (loadList != null && loadList.size() > 0)
+		{
+			this.pokedex = loadList;
+		}
 	}
 	
 	private void createPokedex()
@@ -43,5 +48,10 @@ public class Controller
 		pokedex.add(new Vaporeon());
 		pokedex.add(new Vulpix());
 		pokedex.add(new Pikachu());
+	}
+	
+	public void save()
+	{
+		IOController.saveData(dataFile, pokedex, frame);
 	}
 }
