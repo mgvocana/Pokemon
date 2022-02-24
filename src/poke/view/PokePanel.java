@@ -47,6 +47,7 @@ public class PokePanel extends JPanel
 		this.fieldPanel = new JPanel(new GridLayout());
 		this.pokedexSelector = new JComboBox();
 		this.pokemonImage = new ImageIcon();
+		this.imageLabel = new JLabel();
 		
 		setupPanel();
 		setupListeners();
