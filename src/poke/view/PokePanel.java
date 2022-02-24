@@ -45,10 +45,14 @@ public class PokePanel extends JPanel
 		this.number = new JTextField("Pokedex Number");
 		this.health = new JTextField("Health");
 		this.canEvolve = new JCheckBox("Can evolve");
-		this.fieldPanel = new JPanel(new GridLayout());
+		this.fieldPanel = new JPanel(new GridLayout(0, 1));
+		
 		this.pokedexSelector = new JComboBox<String>();
+		
 		this.pokemonImage = new ImageIcon();
-		this.imageLabel = new JLabel();
+		this.imageLabel = new JLabel("Name and picture go here");
+		layout.putConstraint(SpringLayout.WEST, imageLabel, 150, SpringLayout.WEST, this);
+		
 		this.typePane = new JScrollPane();
 		this.typeText = new JTextArea();
 		
@@ -90,6 +94,14 @@ public class PokePanel extends JPanel
 	
 	private void setupLayout()
 	{
-		
+		layout.putConstraint(SpringLayout.NORTH, fieldPanel, 25, SpringLayout.NORTH, this);
+		layout.putConstraint(SpringLayout.WEST, fieldPanel, -300, SpringLayout.EAST, this);
+		layout.putConstraint(SpringLayout.SOUTH, fieldPanel, -25, SpringLayout.SOUTH, this);
+		layout.putConstraint(SpringLayout.EAST, fieldPanel, -25, SpringLayout.EAST, this);
+		layout.putConstraint(SpringLayout.WEST, pokedexSelector, 150, SpringLayout.WEST, this);
+		layout.putConstraint(SpringLayout.SOUTH, pokedexSelector, -200, SpringLayout.SOUTH, this);
+		layout.putConstraint(SpringLayout.EAST, pokedexSelector, -150, SpringLayout.WEST, fieldPanel);
+		layout.putConstraint(SpringLayout.NORTH, imageLabel, 150, SpringLayout.NORTH, this);
+		layout.putConstraint(SpringLayout.EAST, imageLabel, -100, SpringLayout.WEST, fieldPanel);
 	}
 }
