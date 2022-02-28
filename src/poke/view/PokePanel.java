@@ -131,6 +131,15 @@ public class PokePanel extends JPanel
 		typeText.setText(data[4]);
 	}
 	
+	private void updatePokemonScreen()
+	{
+		String name = pokedexSelector.getSelectedItem().toString();
+		int nameStart = name.indexOf(": ") + 2;
+		name = name.substring(nameStart);
+		updateDisplay(name);
+		updateFields(pokedexSelector.getSelectedIndex());
+	}
+	
 	private void updateDisplay(String name)
 	{
 		String path = "/poke/view/images/";
