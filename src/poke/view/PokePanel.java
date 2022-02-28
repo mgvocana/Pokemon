@@ -99,6 +99,7 @@ public class PokePanel extends JPanel
 	private void setupListeners()
 	{
 		saveButton.addActionListener(click -> controller.save());
+		pokedexSelector.addActionListener(select -> updatePokemonScreen());
 	}
 	
 	private void setupLayout()
@@ -138,6 +139,7 @@ public class PokePanel extends JPanel
 		name = name.substring(nameStart);
 		updateDisplay(name);
 		updateFields(pokedexSelector.getSelectedIndex());
+		imageLabel.setText(name);
 	}
 	
 	private void updateDisplay(String name)
