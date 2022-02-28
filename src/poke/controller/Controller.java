@@ -38,9 +38,9 @@ public class Controller
 		pokedex.add(new Flareon());
 		pokedex.add(new Glaceon());
 		pokedex.add(new Jolteon());
-		pokedex.add(new Jolteon("Sparky"));
+		pokedex.add(new Vulpix("Sparky"));
 		pokedex.add(new Leafeon());
-		pokedex.add(new Meowstic(312, "Fluffers"));
+		pokedex.add(new Vulpix(312, "Fluffers"));
 		pokedex.add(new Meowstic());
 		pokedex.add(new Shaymin());
 		pokedex.add(new Sylveon());
