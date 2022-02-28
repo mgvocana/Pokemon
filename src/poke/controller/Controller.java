@@ -54,4 +54,39 @@ public class Controller
 	{
 		IOController.saveData(dataFile, pokedex, frame);
 	}
+	
+	public String [] buildPokedexText()
+	{
+		String [] pokedexNames = new String [pokedex.size()];
+		
+		for (int index = 0; index < pokedex.size(); index ++)
+		{
+			pokedexNames[index] = index + ": " + pokedex.get(index).getName();
+		}
+		
+		return pokedexNames;
+	}
+	
+	public String [] getPokemonData(int index)
+	{
+		String [] currentPokemonInfo = new String[5];
+		
+		Pokemon currentPokemon = pokedex.get(index);
+		
+		currentPokemonInfo[0] = currentPokemon.getName();
+		currentPokemonInfo[1] = currentPokemon.isCanEvolve() + "";
+		currentPokemonInfo[2] = currentPokemon.getHealth() + "";
+		currentPokemonInfo[3] = currentPokemon.getPokedexNumber() + "";
+		
+		String types = "";
+		
+		for (String type : currentPokemon.getTypes())
+		{
+			types += type + "\n";
+		}
+		
+		currentPokemonInfo[4] = types;
+		
+		return currentPokemonInfo;
+	}
 }
