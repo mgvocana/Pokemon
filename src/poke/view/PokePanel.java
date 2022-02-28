@@ -120,6 +120,17 @@ public class PokePanel extends JPanel
 		pokedexSelector.setModel(pokeModel);
 	}
 	
+	private void updateFields(int index)
+	{
+		String [] data = controller.getPokemonData(index);
+		
+		name.setText(data[0]);
+		canEvolve.setSelected(Boolean.parseBoolean(data[1]));
+		health.setText(data[2]);
+		number.setText(data[3]);
+		typeText.setText(data[4]);
+	}
+	
 	private void updateDisplay(String name)
 	{
 		String path = "/poke/view/images/";
