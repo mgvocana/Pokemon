@@ -10,6 +10,7 @@ import javax.swing.JScrollPane;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JTextField;
+import javax.swing.DefaultComboBoxModel;
 
 import java.awt.GridLayout;
 import java.awt.Color;
@@ -60,6 +61,7 @@ public class PokePanel extends JPanel
 		
 		this.saveButton = new JButton("Gotta catch them all!");
 		
+		setupDropDown();
 		setupPanel();
 		setupListeners();
 		setupLayout();
@@ -110,6 +112,12 @@ public class PokePanel extends JPanel
 		layout.putConstraint(SpringLayout.EAST, pokedexSelector, -150, SpringLayout.WEST, fieldPanel);
 		layout.putConstraint(SpringLayout.NORTH, imageLabel, 150, SpringLayout.NORTH, this);
 		layout.putConstraint(SpringLayout.EAST, imageLabel, -100, SpringLayout.WEST, fieldPanel);
+	}
+	
+	private void setupDropDown()
+	{
+		DefaultComboBoxModel <String> pokeModel = new DefaultComboBoxModel<String>(app.buildPokedexText());
+		pokedexSelector.setModel(pokeModel);
 	}
 	
 	private void updateDisplay(String name)
