@@ -54,7 +54,7 @@ public class PokePanel extends JPanel
 		
 		this.pokemonImage = new ImageIcon();
 		this.imageLabel = new JLabel("Name and picture go here");
-		layout.putConstraint(SpringLayout.WEST, imageLabel, 150, SpringLayout.WEST, this);
+		
 		
 		this.typePane = new JScrollPane();
 		this.typeText = new JTextArea();
@@ -113,6 +113,7 @@ public class PokePanel extends JPanel
 		layout.putConstraint(SpringLayout.EAST, pokedexSelector, -150, SpringLayout.WEST, fieldPanel);
 		layout.putConstraint(SpringLayout.NORTH, imageLabel, 150, SpringLayout.NORTH, this);
 		layout.putConstraint(SpringLayout.EAST, imageLabel, -100, SpringLayout.WEST, fieldPanel);
+		layout.putConstraint(SpringLayout.WEST, imageLabel, 150, SpringLayout.WEST, this);
 	}
 	
 	private void setupDropDown()
