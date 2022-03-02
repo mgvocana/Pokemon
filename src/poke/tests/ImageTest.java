@@ -54,7 +54,7 @@ class ImageTest
 	@Test
 	void testStructure()
 	{
-		assertTrue(modelDirectory.exists(), "You really need a poke.model.monster package!");
+		assertTrue(modelDirectory.exists(), "You really need a poke.model.monsters package!");
 		assertTrue(imagesDirectory.exists(), "You really need a poke.view.images folder!");
 		assertTrue(modelDirectory.isDirectory(), "Needs to be a folder!");
 		assertTrue(imagesDirectory.isDirectory(), "Needs to be a folder!");
@@ -98,12 +98,16 @@ class ImageTest
 		int pictureCount = 0;
 		for (File currentImageFile : imageContents)
 		{
-			int hasExtension = currentImageFile.getAbsolutePath().lastIndexOf(".png");
-			assertTrue(hasExtension > 0, "All image files need to have a .png extension!");
-			if (hasExtension >= 3)
+			if (!currentImageFile.getName().equals(".DS_Store"))
 			{
-				pictureCount++;
+				int hasExtension = currentImageFile.getAbsolutePath().lastIndexOf(".png");
+				assertTrue(hasExtension > 0, "All image files need to have a .png extension!");
+				if (hasExtension >= 3)
+				{
+					pictureCount++;
+				}	
 			}
+			
 		}
 		
 		assertTrue(pictureCount > 5, "You need at least six pictures of pokemon!");

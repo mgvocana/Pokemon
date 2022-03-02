@@ -143,6 +143,22 @@ public class PokePanel extends JPanel
 		imageLabel.setText(name);
 	}
 	
+	private void collectInput()
+	{
+		String nameString = name.getText();
+		String healthString = health.getText();
+		boolean evolve = canEvolve.isSelected();
+		int realHealth = 0;
+		try
+		{
+			realHealth = Integer.parseInt(healthString);
+		}
+		catch (NumberFormatException typo)
+		{
+			realHealth = 0;
+		}
+	}
+	
 	private void updateDisplay(String name)
 	{
 		String path = "/poke/view/images/";
