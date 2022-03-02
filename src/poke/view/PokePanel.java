@@ -157,6 +157,7 @@ public class PokePanel extends JPanel
 		{
 			realHealth = 0;
 		}
+		setupDropDown();
 	}
 	
 	private void updateDisplay(String name)
